@@ -1,0 +1,232 @@
+================================================================================
+              APUNTE: HARDWARE Y ARQUITECTURA DE COMPUTADORAS
+================================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 1. PERIFÉRICOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ ENTRADA (datos VAN hacia la CPU):
+   → Teclado, Mouse/Ratón, Micrófono, Escáner, Cámara web
+
+ SALIDA (datos SALEN desde la CPU hacia el usuario):
+   → Monitor, Altavoces, Impresora, Proyector
+
+ ENTRADA/SALIDA (mixtos):
+   → Pantalla táctil, Modem, Memoria USB, Cascos VR
+
+ TRUCO PARA RECORDAR:
+   Si el dispositivo RECIBE comandos del usuario → ENTRADA
+   Si el dispositivo MUESTRA resultados al usuario → SALIDA
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 2. UNIDADES DE ALMACENAMIENTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  1 Bit      = unidad mínima (0 o 1)
+  8 Bits     = 1 Byte          ← PREGUNTA DE EXAMEN
+  1024 Bytes = 1 Kilobyte (KB)
+  1024 KB    = 1 Megabyte (MB)
+  1024 MB    = 1 Gigabyte (GB) ← PREGUNTA DE EXAMEN
+  1024 GB    = 1 Terabyte (TB)
+
+  Nota: 1024 = 2^10 (lógica binaria, no decimal)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 3. TIPOS DE MEMORIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  RAM (Random Access Memory):
+    - Volátil: PIERDE todo al apagar
+    - Alta velocidad, almacena datos de procesos en ejecución
+
+  ROM (Read Only Memory):
+    - No volátil: CONSERVA datos sin energía
+    - Guarda el firmware (BIOS/UEFI)
+
+  CMOS:
+    - Chip pequeño con PILA PROPIA en la placa base
+    - Guarda: reloj del sistema, orden de arranque, config de BIOS
+    - Usa pila CR2032 para mantenerse sin energía
+
+  Caché L1/L2/L3:
+    - Memoria ultrarrápida DENTRO del procesador
+    - Volátil, no guarda configuraciones, solo acelera operaciones
+
+  VRAM:
+    - Memoria exclusiva de la tarjeta gráfica
+    - Almacena texturas e imágenes
+    - Volátil
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 4. HDD vs SSD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  HDD (Hard Disk Drive):
+    - Tecnología MAGNÉTICA con platos GIRATORIOS
+    - Tiene partes móviles → sensible a golpes
+    - Más lento, más barato por GB
+
+  SSD (Solid State Drive):
+    - Tecnología FLASH (semiconductores)
+    - SIN partes móviles → resistente a golpes
+    - Muy rápido, silencioso, más caro por GB
+
+  CLAVE: Los SSD NO usan discos magnéticos. Usan memoria flash.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 5. ARQUITECTURAS DE PROCESADOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  VON NEUMANN:
+    - UNA sola memoria para datos E instrucciones
+    - UN solo bus compartido
+    - Más simple pero puede generar cuello de botella
+    - Afirmación FALSA: "usa buses separados"
+
+  HARVARD:
+    - Memorias SEPARADAS para datos e instrucciones
+    - Buses SEPARADOS para cada una
+    - Más rápido (acceso simultáneo)
+    - Usado en microcontroladores y DSP
+
+  ┌─────────────────┬──────────────────┬──────────────────┐
+  │                 │   VON NEUMANN    │    HARVARD       │
+  ├─────────────────┼──────────────────┼──────────────────┤
+  │ Memoria         │ Una sola         │ Separadas        │
+  │ Bus             │ Compartido       │ Separados        │
+  │ Velocidad       │ Menor            │ Mayor            │
+  │ Complejidad     │ Menor            │ Mayor            │
+  └─────────────────┴──────────────────┴──────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 6. CISC vs RISC
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  CISC (Complex Instruction Set Computer):
+    - Instrucciones COMPLEJAS y numerosas
+    - Una instrucción puede hacer muchas cosas
+    - Ejemplos: Intel/AMD x86, x86-64
+    - Más código compacto
+
+  RISC (Reduced Instruction Set Computer):
+    - Instrucciones SIMPLES y uniformes
+    - Cada instrucción hace una sola cosa, muy rápido
+    - Ejemplos: ARM (celulares), MIPS
+    - Alta eficiencia energética (ARM)
+    - Complejidad delegada al compilador
+
+  PREGUNTA CLAVE:
+    x86 (Intel/AMD) = CISC
+    ARM (celulares)  = RISC
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 7. COMPILADOR vs INTÉRPRETE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  COMPILADOR:
+    - Traduce TODO el código de una vez
+    - Genera un archivo ejecutable (.exe, binario)
+    - El resultado es más rápido de ejecutar
+    - Ejemplos: C, C++, Rust, Go
+
+  INTÉRPRETE:
+    - Traduce y ejecuta LÍNEA POR LÍNEA en tiempo real
+    - No genera un ejecutable independiente
+    - Más flexible para desarrollo
+    - Ejemplos: Python, JavaScript, Ruby
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 8. BIOS vs UEFI y ARRANQUE DEL SISTEMA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  SECUENCIA DE ARRANQUE:
+    Encendido → POST → Firmware → Carga SO
+
+  POST (Power-On Self Test):
+    - Primera acción del firmware al encender
+    - Verifica: CPU, RAM, dispositivos de almacenamiento, periféricos básicos
+    - Si falla → emite pitidos (beep codes) o muestra error
+
+  BIOS (Legacy):
+    - Antiguo firmware
+    - Busca código en el MBR (primer sector del disco)
+    - Limitado a discos de hasta 2 TB
+    - Usa tabla de particiones MBR
+
+  UEFI (moderno):
+    - Sucesor del BIOS
+    - NO busca el MBR
+    - Busca archivos .efi en la partición ESP (EFI System Partition)
+    - Soporta discos de más de 2 TB
+    - Usa tabla de particiones GPT
+    - Permite Secure Boot, menús gráficos
+
+  CLAVE: UEFI + GPT + ESP + archivos .efi  |  BIOS + MBR
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 9. MODO KERNEL vs MODO USUARIO / ANILLOS DE PROTECCIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  RING 0 (Modo Kernel / Privilegiado):
+    - Acceso TOTAL al hardware
+    - Ejecuta instrucciones privilegiadas
+    - Lo usa el núcleo del SO
+    - Máximo poder, máxima responsabilidad
+
+  RING 3 (Modo Usuario):
+    - Acceso RESTRINGIDO
+    - Las aplicaciones comunes corren aquí
+    - No pueden acceder directamente al hardware
+
+  Para pasar de Ring 3 → Ring 0 se usa:
+    SYSTEM CALL (Llamada al sistema)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 10. INTERRUPCIONES, TRAPS Y SYSTEM CALLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  INTERRUPCIÓN DE HARDWARE:
+    - Generada por DISPOSITIVOS FÍSICOS externos
+    - Ejemplos: presionar una tecla, movimiento del mouse, dato en disco
+    - Asíncrona (ocurre en cualquier momento)
+
+  INTERRUPCIÓN DE SOFTWARE (System Call / Trap):
+    - Generada por PROGRAMAS que necesitan servicios del SO
+    - Ejemplos: leer un archivo, crear un proceso, enviar datos por red
+    - Sincrónica (ocurre por una instrucción específica)
+    - Permite pasar de modo usuario a modo kernel de forma controlada
+
+  TRAP (Trampa):
+    - Generada INTERNAMENTE por el procesador
+    - Por: división por cero, acceso a memoria no permitida, overflow
+    - También se usa para implementar system calls
+
+  RESUMEN:
+    Hardware externo actúa  → Interrupción de hardware
+    Programa pide algo al SO → Interrupción de software / System call
+    CPU detecta error        → Trap
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 11. PCB Y ESTADOS DE PROCESOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  PCB (Process Control Block / Bloque de Control de Proceso):
+    - Estructura que el SO usa para gestionar cada proceso
+    - Contiene: estado, Program Counter, registros CPU,
+                tabla de páginas, prioridad, archivos abiertos
+    - Es el "expediente" del proceso
+
+  PROGRAM COUNTER:
+    - Registro que apunta a la SIGUIENTE instrucción a ejecutar
+
+  ESTADOS DE UN PROCESO:
+    LISTO     → espera turno de CPU, todo listo para ejecutar
+    EJECUTANDO → usando la CPU en este momento
+    BLOQUEADO → espera un evento externo (lectura de disco, teclado, red)
+
+  TABLA DE PÁGINAS:
+    - Traduce direcciones VIRTUALES → FÍSICAS
+    - Permite memoria virtual (procesos creen tener más RAM de la real)
+
+================================================================================
