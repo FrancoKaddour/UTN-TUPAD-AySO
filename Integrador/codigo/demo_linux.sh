@@ -2,6 +2,7 @@
 # ============================================================
 # TRABAJO INTEGRADOR – Arquitectura y Sistemas Operativos
 # Demostración práctica: Seguridad en Linux
+# Integrantes: Franco Kaddour – Gonzalo Isaias
 # ============================================================
 
 echo "========================================"
@@ -27,7 +28,8 @@ echo "Permisos después de chmod 600 (solo propietario):"
 ls -la archivo_sensible.txt
 
 # Crear un script ejecutable con permisos correctos
-echo '#!/bin/bash\necho "script seguro"' > mi_script.sh
+# (se usa printf para que el salto de línea se interprete correctamente)
+printf '#!/bin/bash\necho "script seguro"\n' > mi_script.sh
 chmod 755 mi_script.sh
 echo "Script con chmod 755 (propietario todo, resto solo leer/ejecutar):"
 ls -la mi_script.sh

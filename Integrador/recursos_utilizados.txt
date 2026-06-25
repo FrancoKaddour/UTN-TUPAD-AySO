@@ -1,0 +1,65 @@
+RECURSOS UTILIZADOS
+Trabajo Integrador - Arquitectura y Sistemas Operativos
+"Seguridad en los Sistemas Operativos"
+Integrantes: Franco Kaddour - Gonzalo Isaias
+Comision: 11
+=======================================================
+
+Aca dejamos todos los recursos que usamos para hacer el trabajo. La idea,
+la investigacion, la escritura, las pruebas de los comandos y las
+conclusiones las hicimos nosotros dos como grupo. Lo que figura mas abajo
+son las fuentes que consultamos y las herramientas que usamos para
+organizarnos y dejar todo prolijo.
+
+
+1) BIBLIOGRAFIA Y FUENTES QUE CONSULTAMOS
+-----------------------------------------
+
+Libros y articulos:
+- Shotts, W. (2019). The Linux Command Line: A Complete Introduction (2.a ed.). No Starch Press.
+- Stallings, W. (2018). Operating Systems: Internals and Design Principles (9.a ed.). Pearson.
+- Tanenbaum, A. S. & Bos, H. (2014). Modern Operating Systems (4.a ed.). Pearson.
+- Schneier, B. (2000). Secrets and Lies: Digital Security in a Networked World. Wiley.
+- Anderson, R. (2020). Security Engineering (3.a ed.). Wiley.
+
+Documentacion oficial:
+- NIST (2024). Cybersecurity Framework. https://www.nist.gov/cyberframework
+- Microsoft Learn. Windows Security documentation. https://learn.microsoft.com/en-us/windows/security
+- Microsoft Security Response Center. Boletin MS17-010. https://learn.microsoft.com/en-us/security-updates/
+- Linux man pages: chmod(1), chown(1), sudo(8), ufw(8), iptables(8). https://man7.org/linux/man-pages/
+- Ubuntu Documentation - AppArmor. https://ubuntu.com/server/docs/security-apparmor
+- Fail2ban Documentation. https://www.fail2ban.org/wiki/index.php/Main_Page
+- INCIBE - Guias de ciberseguridad. https://www.incibe.es/
+
+Reportes tecnicos y caso WannaCry:
+- MITRE. CVE-2017-0144 (EternalBlue). https://cve.mitre.org
+- National Cyber Security Centre UK (2017). WannaCry ransomware attack. https://www.ncsc.gov.uk
+- Kaspersky Lab (2017). WannaCry ransomware. https://securelist.com
+
+
+2) HERRAMIENTAS DE SOFTWARE QUE USAMOS
+--------------------------------------
+- Visual Studio Code: para escribir y editar el informe y los scripts.
+- Canva: para armar las diapositivas de la presentacion.
+- PowerShell (Windows): para correr la demostracion de seguridad en Windows.
+- Terminal de Linux: para correr la demostracion de seguridad en Linux.
+- OBS Studio: para grabar el video con la explicacion.
+
+
+3) APOYO PARA INVESTIGAR (USO DE IA)
+------------------------------------
+Para entender mejor algunos comandos de Linux y de PowerShell usamos
+Claude Code como herramienta de apoyo, mas que nada para sacarnos dudas
+puntuales sobre como funcionaban ciertos comandos, para chequear que la
+informacion estuviera bien explicada y para ordenar el documento.
+
+Aclaramos que lo usamos solo como una ayuda de consulta, parecido a buscar
+en internet o preguntarle a un profesor. Todo el contenido lo entendimos,
+lo probamos nosotros mismos en las maquinas y lo escribimos con nuestras
+palabras. Las decisiones de que poner, como armar las demos y que concluir
+fueron del grupo. El trabajo fue realizado integramente por nosotros dos.
+
+
+=======================================================
+Franco Kaddour - Gonzalo Isaias
+Comision 11 - 2026
