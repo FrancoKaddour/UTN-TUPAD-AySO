@@ -19,9 +19,10 @@ UTN-TUPAD-AySO/
 │       ├── Modelos OSI y TCP/
 │       └── Subredes Puertos y Otros/
 └── Integrador/
-    ├── PDF/
     ├── codigo/
-    └── recursos/
+    ├── presentacion/
+    ├── Integrador_AySO.pdf
+    └── recursos_utilizados.txt
 ```
 
 ## Contenido por módulo
